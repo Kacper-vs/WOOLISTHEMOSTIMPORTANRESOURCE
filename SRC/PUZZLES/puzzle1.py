@@ -13,8 +13,6 @@ from FUNCTIONS.typing_func import countdown_timer
 
 # VARIABLES
 Y_OR_N = ["YES", "NO"]
-C_OR_P = ["COURAGE", "PASSION"]
-
 
 config = configparser.ConfigParser()
 
