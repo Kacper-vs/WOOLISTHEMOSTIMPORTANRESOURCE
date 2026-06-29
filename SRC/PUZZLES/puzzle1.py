@@ -13,6 +13,8 @@ from FUNCTIONS.typing_func import countdown_timer
 
 # VARIABLES
 Y_OR_N = ["YES", "NO"]
+PZL_ANS = ["TULIP","ROOTS"]
+
 
 config = configparser.ConfigParser()
 
@@ -64,6 +66,10 @@ PHRASE_TWO = entity_data["pzl1_input"]["PHRASE TWO"]
 TAUNT = entity_data["???"]["TAUNT"]
 NARRATOR_HINT = narrator_data["NARRATOR_PRINT"]["HINT_1"]
 
+CHECK_AWNSER_1 = entity_data["YOKAI_CHECK"]["CHECK_AWNSER1"]
+CHECK_AWNSER_2 = entity_data["YOKAI_CHECK"]["CHECK_AWNSER2"]
+
+
 
 def puzzle_1():
     clear_screen()
@@ -79,6 +85,8 @@ def puzzle_1():
         speak(get_prefix("narrator"), NARRATOR, NARRATOR_HINT)
         time.sleep(0.25)
         countdown_timer(30, YOKAI)
-
-
+        clear_screen()
+        CA1 = question(get_prefix("yokai"), YOKAI, CHECK_AWNSER_1)
+        if CA1.strip().upper() == PZL_ANS[0]:
+            pass
 puzzle_1()

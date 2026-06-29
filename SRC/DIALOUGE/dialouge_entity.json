@@ -8,7 +8,13 @@
     "pzl1_input":{
         "PHRASE ONE": "Ten Ugly Long-necked Ittan-momen Prowl.\n",
         "PHRASE TWO": "Rokurokubi often outsmart terrified samurai.\n \n"
+    },
+    "YOKAI_CHECK" :{
+        "CHECK_AWNSER1" : "Times up... Whats your awnser.", 
+        "CHECK_AWNSER2" : "Alright Now for the second one..." 
     }
+
+    
     
 }
 
