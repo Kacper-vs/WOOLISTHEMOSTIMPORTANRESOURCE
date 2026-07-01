@@ -51,7 +51,6 @@ WARNING = get_color("warning", "color")
 SUCCESS = get_color("success", "color")
 YOKAI = get_color("yokai", "color")
 
-
 def speak(prefix, color, text):
     typing_print(color + prefix + " " + text + RESET, 0.01)
 
@@ -68,7 +67,8 @@ NARRATOR_HINT = narrator_data["NARRATOR_PRINT"]["HINT_1"]
 CHECK_AWNSER_1 = entity_data["YOKAI_CHECK"]["CHECK_AWNSER1"]
 CHECK_AWNSER_2 = entity_data["YOKAI_CHECK"]["CHECK_AWNSER2"]
 
-
+PRAISE_1 = entity_data["PRAISE"]["PRAISE_1"]
+PRAISE_2 = entity_data["PRAISE"]["PRAISE_2"]
 
 def puzzle_1():
     clear_screen()
@@ -78,7 +78,7 @@ def puzzle_1():
         speak(get_prefix("yokai"), YOKAI, PHRASE_ONE)
         time.sleep(1)
         speak(get_prefix("yokai"), YOKAI, PHRASE_TWO)
-        time.sleep(1)
+        time.sleep(0.1)
         speak(get_prefix("yokai"), YOKAI, TAUNT)
         time.sleep(0.5)
         speak(get_prefix("narrator"), NARRATOR, NARRATOR_HINT)
@@ -88,6 +88,8 @@ def puzzle_1():
         CA1 = question(get_prefix("yokai"), YOKAI, CHECK_AWNSER_1)
         if CA1.strip().upper() == PZL_ANS[0]:
             CA2 = question(get_prefix("yokai"), YOKAI , CHECK_AWNSER_2)
-            
-
-puzzle_1()
+            if CA2.strip().upper() == PZL_ANS[1]:
+                speak(get_prefix("yokai"), YOKAI , PRAISE_2) #NEED TO ADD PRAISE 
+                #TODO- PUZZLE 2 
+                #PlaceHolderForPuzzle2
+        

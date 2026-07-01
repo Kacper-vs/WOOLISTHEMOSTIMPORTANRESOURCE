@@ -60,7 +60,7 @@ def question(prefix, color, text):
 # ---------------------------
 with open(
     os.path.join(BASE_DIR, "DIALOUGE", "dialouge_narrator.json"), "r", encoding="utf-8"
-) as file:
+) as file :
     narrator_data = json.load(file)
 
 with open(
@@ -107,5 +107,7 @@ def story():
 
     else:
         clear_screen()
-        typing_print(WARNING + "Invalid input..." + RESET, 0.05)
+        time.sleep(0.5)
+        speak(get_prefix("???: "), NARRATOR, "Exiting the expidition...")
+
 

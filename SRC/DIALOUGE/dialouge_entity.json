@@ -1,21 +1,21 @@
 {
     "???": {
-        "TAUNT": "TICK TOCK TICK TOCK....",
-        "PUZZLE ONE" : "Are you ready to being your challenge... ",
+        "TAUNT": "TICK TOCK TICK TOCK....\n",
+        "PUZZLE ONE" : "Are you ready to being your challenge...\n ",
         "GREETING": "Welcome to my ga- i mean expidition...\n",
         "QUESTION ONE": "What do you seek most... [COURAGE OR PASSION]\n"
     },
     "pzl1_input":{
         "PHRASE ONE": "Ten Ugly Long-necked Ittan-momen Prowl.\n",
-        "PHRASE TWO": "Rokurokubi often outsmart terrified samurai.\n \n"
+        "PHRASE TWO": "Rokurokubi often outsmart terrified samurai.\n"
     },
     "YOKAI_CHECK" :{
-        "CHECK_AWNSER1" : "Times up... Whats your awnser.", 
-        "CHECK_AWNSER2" : "Alright Now for the second one..." 
+        "CHECK_AWNSER1" : "Times up... Whats your awnser. \n", 
+        "CHECK_AWNSER2" : "Alright Now for the second one...\n" 
     }, 
     "PRAISE" : {
-       "PRAISE_1" : "Well Done... This will be over soon.", 
-       "PRAISE_2" : "Good Stuff Now that you awnser finsished follow through and i lett you pass..."
+       "PRAISE_1" : "Well Done... This will be over soon.\n", 
+       "PRAISE_2" : "Good Stuff Now that you awnser finsished follow through and i lett you pass... \n"
     }
     
 }
