@@ -52,11 +52,11 @@ SUCCESS = get_color("success", "color")
 YOKAI = get_color("yokai", "color")
 
 def speak(prefix, color, text):
-    typing_print(color + prefix + " " + text + RESET, 0.01)
+    typing_print(color + prefix + " " + text + RESET, 0.05)
 
 
 def question(prefix, color, text):
-    return typing_input(color + prefix + " " + text + RESET, 0.01)
+    return typing_input(color + prefix + " " + text + RESET, 0.05)
 
 BEGINNING_PHRASE = entity_data["???"]["PUZZLE ONE"]
 PHRASE_ONE = entity_data["pzl1_input"]["PHRASE ONE"]

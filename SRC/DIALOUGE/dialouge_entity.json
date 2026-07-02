@@ -14,8 +14,9 @@
         "CHECK_AWNSER2" : "Alright Now for the second one...\n" 
     }, 
     "PRAISE" : {
+       "WELLDONE" : "Good Job on that last puzzle dont think it will be that easy from now on any wrong awnser will result in punishment from me...",
        "PRAISE_1" : "Well Done... This will be over soon.\n", 
-       "PRAISE_2" : "Good Stuff Now that you awnser finsished follow through and i lett you pass... \n"
+       "PRAISE_2" : "Good Stuff Now that you awnsered follow through and i lett you pass... \n" 
     }
     
 }

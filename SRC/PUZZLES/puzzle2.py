@@ -8,8 +8,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from FUNCTIONS.typing_func import typing_print
 from FUNCTIONS.typing_func import typing_input
 from FUNCTIONS.typing_func import clear_screen
-
 from FUNCTIONS.typing_func import countdown_timer 
+
+from FUNCTIONS.math_algorithim import gernerate_ez_problem 
+
 
 #VARS # TEMP
 
@@ -43,12 +45,17 @@ def get_color(section, key):
     return parse_ansi(config[section][key])
 
 
+WELLDONE = entity_data["PRAISE"]["WELLDONE"]
+
+
+
+
+
 RESET = "\033[0m"
 NARRATOR = get_color("narrator", "color")
 WARNING = get_color("warning", "color")
 SUCCESS = get_color("success", "color")
 YOKAI = get_color("yokai", "color")
-rser.ConfigParser()
 
 SRC_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INI_PATH = os.path.join(SRC_DIR, "ASSETS", "color.ini")
@@ -61,14 +68,14 @@ def question(prefix, color, text):
     return typing_input(color + prefix + " " + text + RESET + 0.01)
 
 
+
 def puzzle_2():
     clear_screen()
     time.sleep(0.25)
-    #TEMP WELLDONE 
-    #ASK QUESTION 
-    #TAUNT  
+    speak(get_prefix("yokai"),YOKAI, WELLDONE)    #TEMP WELLDONE 
+    gernerate_ez_problem()  
     #GIVE QUESTION BASED ON AWNSER 
     #MAKE USER HAVE 3 LIVES 
     #LOSE = DEATH 
 
-    
+puzzle_2()    
