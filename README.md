@@ -1,5 +1,4 @@
-
-<img width="537.5" height="311.5" alt="MAIN LOGO" src="https://github.com/user-attachments/assets/557247b2-649c-4b04-b2a5-fba5fce25f67" />
+<img width="786" height="246" alt="Group 1 (3)" src="https://github.com/user-attachments/assets/d0f6c8b2-2f7c-4f06-940c-7e44c2dfd146" />
 
 ## HEY ! If you have too much money come buy me a coffee ;)
 
