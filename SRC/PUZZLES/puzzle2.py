@@ -73,7 +73,7 @@ def puzzle_2():
     clear_screen()
     time.sleep(0.25)
     speak(get_prefix("yokai"),YOKAI, WELLDONE)    #TEMP WELLDONE 
-    gernerate_ez_problem()  
+     
     #GIVE QUESTION BASED ON AWNSER 
     #MAKE USER HAVE 3 LIVES 
     #LOSE = DEATH 

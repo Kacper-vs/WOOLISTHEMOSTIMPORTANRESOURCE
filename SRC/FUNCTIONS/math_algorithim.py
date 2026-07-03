@@ -1,13 +1,61 @@
-import random 
-import math 
-import fractions as fractions 
+import json
+import os
+import time
+import configparser
+import sys
 
-def gernerate_ez_problem():
-    x = random.randint(2,18) 
-    a = random.randint(2,16)
-    b = random.randint(2.26)
-    total = (a*x) + b 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-    problem_prompt = f"Solve for x:\n{a}x +{b} {c}"
+from FUNCTIONS.typing_func import typing_print
+from FUNCTIONS.typing_func import typing_input
+from FUNCTIONS.typing_func import clear_screen
+from FUNCTIONS.typing_func import countdown_timer
 
-    awnser = total 
+
+
+config = configparser.ConfigParser()
+
+SRC_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+INI_PATH = os.path.join(SRC_DIR , "ASSETS", "color.ini")
+
+config.read(INI_PATH)
+
+with open(
+    os.path.join(SRC_DIR, "DIALOUGE","dialouge_narrator.json"), "r" , encoding = "utf-8") as file:
+    narrator_data = json.load(file)
+
+with open(os.path.join(SRC_DIR, "r", "dialouge_narrator.json"), "r", encoding = "utf-8") as file: 
+    entity_data = json.load(file)
+
+
+ #EXTRA FUNCTIONS ##
+def get_prefix(section):
+    return config[section]["prefix"]
+def parse_ansi(value):
+    return value.encode().decode("unicode_escape")
+
+def get_color(section, key):
+    return parse_ansi(config[section][key])
+
+#COLOR DEFINITIONS##
+
+RESET = "\033[0m"
+NARRATOR = get_color("narrator", "color")          
+WARNING = get_color("warning", "color")                
+SUCCESS = get_color("success", "color")             
+YOKAI = get_color("yokai", "color")
+
+def speak(prefix, color , text):
+        typing_print(color + prefix + " " + text + RESET, 0.05)
+
+def quetion(prefix, color, text):
+        return typing_input(color + prefix + " " + text + RESET , 0.05)
+
+
+def easy_problem(generated_number1, generated_number2):
+    pass 
+
+def hard_problem(generated_number1, generated_number2):
+    pass 
+
