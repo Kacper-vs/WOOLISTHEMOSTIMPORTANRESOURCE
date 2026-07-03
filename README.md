@@ -1,5 +1,4 @@
-
-<img width="537.5" height="311.5" alt="MAIN LOGO" src="https://github.com/user-attachments/assets/557247b2-649c-4b04-b2a5-fba5fce25f67" />
+![Banner](https://github.com/user-attachments/assets/d12db551-eec8-4239-a95f-15edac976adf)
 
 ## HEY ! If you have too much money come buy me a coffee ;)
 
