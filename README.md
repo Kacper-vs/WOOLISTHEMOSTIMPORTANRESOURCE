@@ -1,4 +1,4 @@
-<img width="825" height="261" alt="Group 1 (4)" src="https://github.com/user-attachments/assets/d12db551-eec8-4239-a95f-15edac976adf" />
+![Banner](https://github.com/user-attachments/assets/d12db551-eec8-4239-a95f-15edac976adf)
 
 ## HEY ! If you have too much money come buy me a coffee ;)
 
