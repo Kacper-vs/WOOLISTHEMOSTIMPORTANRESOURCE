@@ -20,6 +20,7 @@ SRC_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INI_PATH = os.path.join(SRC_DIR, "ASSETS", "color.ini")
 config.read(INI_PATH)
 
+PZL2_POSSIBLE_AWNSERS = ['YES','NO']
 
 with open(
     os.path.join(SRC_DIR, "DIALOUGE", "dialouge_narrator.json"), "r", encoding="utf-8"
@@ -42,11 +43,8 @@ def parse_ansi(value):
 def get_color(section, key):
     return parse_ansi(config[section][key])
 
-lives = 3 
-
-
-
-MATHQUESTIONPROMPT = entity_data["pzl2_input"]["PROMPT2"]
+lives = 3  
+MATHQUESTIONPROMPT = entity_data["pzl2_input"]["PROMPT1"]
 WELLDONE = entity_data["PRAISE"]["WELLDONE"]
 
 RESET = "\033[0m"
@@ -66,7 +64,7 @@ def question(prefix, color, text):
     return typing_input(color + prefix + " " + text + RESET , 0.01)
 
 def lose_live(amount):
-     lives == lives - 1
+     lives == lives - amount
      speak(get_prefix('yokai'), YOKAI, f"You have {lives}lives remaining")
 
 
@@ -75,7 +73,14 @@ def puzzle_2():
     time.sleep(0.25)
     speak(get_prefix("yokai"),YOKAI, WELLDONE)    #TEMP WELLDONE 
     prompt = question(get_prefix('yokai'), YOKAI ,MATHQUESTIONPROMPT )
-    #MAKE AWNSERS 
+    if prompt == PZL2_POSSIBLE_AWNSERS[0].strip().upper():
+         pass
+         #let them know that lives == 3  and lose them all punishment 
+    elif prompt == PZL2_POSSIBLE_AWNSERS[1].strip().upper():
+         pass 
+    else:
+       #taunt insert here 
+       lose_live(1) 
     #MAKE USER HAVE 3 LIVES and leave  
     #LOSE = DEATH 
 
