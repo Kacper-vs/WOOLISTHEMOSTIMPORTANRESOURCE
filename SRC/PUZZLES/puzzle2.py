@@ -22,11 +22,11 @@ SRC_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INI_PATH = os.path.join(SRC_DIR, "ASSETS", "color.ini")
 config.read(INI_PATH)
 
+
 with open(
     os.path.join(SRC_DIR, "DIALOUGE", "dialouge_narrator.json"), "r", encoding="utf-8"
 ) as file:
     narrator_data = json.load(file)
-
 with open(
     os.path.join(SRC_DIR, "DIALOUGE", "dialouge_entity.json"), "r", encoding="utf-8"
 ) as file:
@@ -44,12 +44,12 @@ def parse_ansi(value):
 def get_color(section, key):
     return parse_ansi(config[section][key])
 
+lives = 3 
 
+
+
+MATHQUESTIONPROMPT = entity_data["pzl2_input"]["PROMPT2"]
 WELLDONE = entity_data["PRAISE"]["WELLDONE"]
-
-
-
-
 
 RESET = "\033[0m"
 NARRATOR = get_color("narrator", "color")
@@ -67,15 +67,18 @@ def speak(prefix, color, text):
 def question(prefix, color, text):
     return typing_input(color + prefix + " " + text + RESET + 0.01)
 
+def lose_live(amount):
+     lives == lives - 1
+     speak(get_prefix('yokai'), YOKAI, f"You have {lives}lives remaining")
 
 
 def puzzle_2():
     clear_screen()
     time.sleep(0.25)
     speak(get_prefix("yokai"),YOKAI, WELLDONE)    #TEMP WELLDONE 
-     
-    #GIVE QUESTION BASED ON AWNSER 
-    #MAKE USER HAVE 3 LIVES 
+    prompt = question(get_prefix('yokai'), YOKAI ,MATHQUESTIONPROMPT )
+    #MAKE AWNSERS 
+    #MAKE USER HAVE 3 LIVES and leave  
     #LOSE = DEATH 
 
 puzzle_2()    
