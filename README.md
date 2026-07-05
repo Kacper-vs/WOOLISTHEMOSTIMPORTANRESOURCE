@@ -18,7 +18,7 @@
 | CREDITS | What they did |
 | ------------- |:-------------:|
 | Me        | Made the game     |
-| Myself    | Made the logo     |
+| Eluxtra   | All soundtracks by him  |
 | I         | SOME OTHER STUFF  |
 
 
