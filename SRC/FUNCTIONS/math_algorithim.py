@@ -25,7 +25,7 @@ with open(
     os.path.join(SRC_DIR, "DIALOUGE","dialouge_narrator.json"), "r" , encoding = "utf-8") as file:
     narrator_data = json.load(file)
 
-with open(os.path.join(SRC_DIR, "r", "dialouge_narrator.json"), "r", encoding = "utf-8") as file: 
+with open(os.path.join(SRC_DIR, "DIALOUGE", "dialouge_entity.json"), "r", encoding = "utf-8") as file: 
     entity_data = json.load(file)
 
 

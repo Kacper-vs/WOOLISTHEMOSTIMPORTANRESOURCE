@@ -10,8 +10,6 @@ from FUNCTIONS.typing_func import typing_input
 from FUNCTIONS.typing_func import clear_screen
 from FUNCTIONS.typing_func import countdown_timer 
 
-from FUNCTIONS.math_algorithim import gernerate_ez_problem 
-
 
 #VARS # TEMP
 
@@ -62,10 +60,10 @@ INI_PATH = os.path.join(SRC_DIR, "ASSETS", "color.ini")
 config.read(INI_PATH)
 
 def speak(prefix, color, text):
-        typing_print(color + prefix + " " + text + RESET, 0.01)
+        typing_print(color + prefix + " " + text + RESET , 0.01)
 
 def question(prefix, color, text):
-    return typing_input(color + prefix + " " + text + RESET + 0.01)
+    return typing_input(color + prefix + " " + text + RESET , 0.01)
 
 
 
