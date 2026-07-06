@@ -21,6 +21,9 @@
     "pzl2_input" :{
         "PROMPT1" : "Does your stupidity lay in my hands... [YES,NO] : ", 
         "" : ""
+    },
+    "MAIN_TAUNT":{
+        "LOSELIVEPROMPT" : "Thats one life gone i would'nt be so ignorant if i were you"
     }
 
     
