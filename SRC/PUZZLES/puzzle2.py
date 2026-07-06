@@ -74,8 +74,12 @@ def mathproblema():
     x = 10 
     z = 21 
     y = 10 
+    soulution = x + y * z
     speak(get_prefix('yokai'), YOKAI , f"Consider this your second puzzle... What's {x} + {y} * {z}")
     raw_prompt = question(get_prefix('yokai'), YOKAI , )
+    prompt = raw_prompt.strip().upper()
+    if prompt == str(solution):
+        print('well done ')
 
 def lose_live(amount):
     global lives
