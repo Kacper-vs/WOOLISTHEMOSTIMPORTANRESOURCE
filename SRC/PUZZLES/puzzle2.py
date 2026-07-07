@@ -142,4 +142,4 @@ def puzzle_2():
         sys.exit()
 
 # --- EXECUTION --- 
-puzzle_2()y
+puzzle_2()
