@@ -7,7 +7,7 @@
         "PROMPT TO STRT MATCH": "Would you like to start your expidition [YES OR NO]: "
     },
     "NARRATORHINT" : {
-        "PUZZLE2_HINT":"Remember when getting the awnser wrong three times... will result in your perish."
+        "PUZZLE2_HINT":"Remember when getting the awnser wrong three times... will result in your perish.\n"
     }
 }
 
