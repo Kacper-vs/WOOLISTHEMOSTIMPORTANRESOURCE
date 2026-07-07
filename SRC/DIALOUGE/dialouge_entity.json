@@ -14,13 +14,15 @@
         "CHECK_AWNSER2" : "Alright Now for the second one...\n" 
     }, 
     "PRAISE" : {
+       "PRAISE_4" : "Guess you are as smart as you say", 
+       "PRAISE_3" : "Well done, guess your not that stupid after all.",  
        "WELLDONE" : "Good Job on that last puzzle dont think it will be that easy from now on any wrong awnser will result in punishment from me...\n",
        "PRAISE_1" : "Well Done... This will be over soon.\n", 
        "PRAISE_2" : "Good Stuff Now that you awnsered follow through and i lett you pass... \n" 
     },
     "pzl2_input" :{
         "PROMPT1" : "Does your stupidity lay in my hands... [YES,NO] : ", 
-        "" : ""
+        "PROMPT2" : "So, what was your final solution : "
     },
     "MAIN_TAUNT":{
         "LOSELIVEPROMPT" : "Thats one life gone i would'nt be so ignorant if i were you"

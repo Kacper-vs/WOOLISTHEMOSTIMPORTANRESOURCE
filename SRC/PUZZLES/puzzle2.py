@@ -54,12 +54,14 @@ def question(prefix, color, text):
 
 lives = 3 
 
-# Constants from JSON
+# Constants from JSON\
+PRAISE_3_ALT = entity_data["PRAISE"]["PRAISE_4"]
+PRAISE_3 = entity_data["PRAISE"]["PRAISE_3"]
 MATHQUESTIONPROMPT = entity_data["pzl2_input"]["PROMPT1"]
 WELLDONE_TEXT = entity_data["PRAISE"]["WELLDONE"]
 LOSELIVE_TAUNT = entity_data["MAIN_TAUNT"]["LOSELIVEPROMPT"]
 PZL2_HINT = narrator_data["NARRATORHINT"]["PUZZLE2_HINT"]
-
+MATHQUESTIONAWNSERPROMPT = entity_data["pzl2_input"]["PROMPT2"]
 
 # Color Constants
 RESET = "\033[0m"
@@ -70,16 +72,34 @@ YOKAI = get_color("yokai", "color")
 
 # --- LOGIC FUNCTIONS ---
 
+def mathproblemb():
+    x = 10 
+    y = 20 
+    z = 54 
+    global solution 
+    solution = ( x + y * z ) * z + y + x
+    speak(get_prefix('yokai'), YOKAI , f"Consider this you second puzzle... What's ({x} + {y} * {z} ) * {z} + {y} + {x} \n")
+    raw_prompt = question(get_prefix('yokai'), YOKAI , MATHQUESTIONAWNSERPROMPT)
+    prompt = raw_prompt.strip().upper()
+    if prompt == str(solution):
+        speak(get_prefix('yokai'), YOKAI , PRAISE_3_ALT)
+    elif prompt != str(solution):
+        lose_live
+
+
 def mathproblema():
     x = 10 
     z = 21 
     y = 10 
-    soulution = x + y * z
-    speak(get_prefix('yokai'), YOKAI , f"Consider this your second puzzle... What's {x} + {y} * {z}")
-    raw_prompt = question(get_prefix('yokai'), YOKAI , )
+    global soulution 
+    solution = x + y * z 
+    speak(get_prefix('yokai'), YOKAI , f"Consider this your second puzzle... What's {x} + {y} * {z} \n")
+    raw_prompt = question(get_prefix('yokai'), YOKAI ,MATHQUESTIONAWNSERPROMPT )
     prompt = raw_prompt.strip().upper()
     if prompt == str(solution):
-        print('well done ')
+        speak(get_prefix('yokai'), YOKAI , PRAISE_3)
+    elif prompt != str(solution):
+        lose_live(1)
 
 def lose_live(amount):
     global lives
@@ -103,12 +123,11 @@ def puzzle_2():
     prompt = raw_input.strip().upper()
 
     if prompt == "YES":
-        speak(get_prefix('yokai'), YOKAI, "CORRECT. [INSERT EASY QUESTION HERE]")
-        
-        # Example: lives = 3
+        mathproblema()    
+    
         
     elif prompt == "NO":
-        speak(get_prefix('yokai'), YOKAI, "CORRECT, INSERT HARD QUESTION HERE")
+        mathproblemb()
         
     else:
         # Handle invalid input
@@ -122,7 +141,5 @@ def puzzle_2():
         speak(get_prefix('warning'), WARNING, "GAME OVER")
         sys.exit()
 
-# --- EXECUTION ---
-
-if __name__ == "__main__":
-    puzzle_2()
+# --- EXECUTION --- 
+puzzle_2()y
